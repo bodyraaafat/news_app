@@ -19,34 +19,34 @@ class NewsTile extends StatelessWidget {
                     height: 250,
                     fit: BoxFit.cover,
                     placeholder: (context, url) =>
-                        Center(child: CircularProgressIndicator()),
+                        const Center(child: CircularProgressIndicator()),
                     errorWidget: (context, url, error) => Icon(Icons.error),
                   )
                 : Container(
                     width: double.infinity,
                     height: 250,
                     color: Colors.grey,
-                    child: Icon(Icons.image_not_supported, size: 50),
+                    child: const Icon(Icons.image_not_supported, size: 50),
                   )),
-        SizedBox(
+        const SizedBox(
           height: 12,
         ),
         Text(
           overflow: TextOverflow.ellipsis,
           maxLines: 2,
           articlModel.title,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 21,
             fontWeight: FontWeight.w500,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 5,
         ),
         Text(
           maxLines: 2,
           articlModel.subtitle ?? '',
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.grey,
             fontSize: 14,
           ),

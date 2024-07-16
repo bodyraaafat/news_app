@@ -14,6 +14,7 @@ class NewsListViewBuilder extends StatefulWidget {
 }
 
 class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
+  // ignore: prefer_typing_uninitialized_variables
   var future;
   @override
   void initState() {
@@ -29,13 +30,13 @@ class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
           if (snapshot.hasData) {
             return NewsListview(articles: snapshot.data!);
           } else if (snapshot.hasError) {
-            return SliverToBoxAdapter(
+            return const SliverToBoxAdapter(
               child: Center(
                 child: Text("Oops there was an error"),
               ),
             );
           } else {
-            return SliverToBoxAdapter(
+            return const SliverToBoxAdapter(
                 child: Center(
               child: CircularProgressIndicator(),
             ));

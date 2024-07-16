@@ -21,22 +21,22 @@ class CategoryCard extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(right: 8),
         child: Container(
-          child: Center(
-            child: Text(
-              category.text,
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
           height: 85,
           width: 150,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
             image: DecorationImage(
                 image: AssetImage(category.image), fit: BoxFit.cover),
+          ),
+          child: Center(
+            child: Text(
+              category.text,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
         ),
       ),

@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:news_app/widgets/categories_listview.dart';
 import 'package:news_app/widgets/news_listview_builder.dart';
 
@@ -13,7 +12,7 @@ class HomeView extends StatelessWidget {
         appBar: AppBar(
             centerTitle: true,
             backgroundColor: Colors.transparent,
-            title: Row(
+            title: const Row(
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
@@ -26,12 +25,12 @@ class HomeView extends StatelessWidget {
                 )
               ],
             )),
-        body: Padding(
+        body: const Padding(
             padding: EdgeInsets.all(14),
             child: CustomScrollView(
               slivers: [
                 SliverToBoxAdapter(
-                  child: const CategoriesListView(),
+                  child: CategoriesListView(),
                 ),
                 SliverToBoxAdapter(
                   child: SizedBox(
